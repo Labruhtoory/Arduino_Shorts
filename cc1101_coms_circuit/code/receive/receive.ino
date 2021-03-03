@@ -33,5 +33,5 @@ void loop() {
       
     }
   }
-  ELECHOUSE_cc1101.SetReceive(); //making sure to put the module back in receive mode, I put I here bc sometimes my external circuit (on the relay) would not ignite on the first go.
+  ELECHOUSE_cc1101.SetReceive(); //making sure to put the module back in receive mode.
 }
