@@ -3,7 +3,6 @@
 #include "SPI.h"
 
 int igpin = 8
-
 int SentMessage[1] = {000}; // Used to store value before being sent through the NRF24L01
 RF24 radio(9,10); // NRF24L01 using SPI pins + Pin 9 and 10 on the NANO
 const uint64_t pipe = 0xE6E6E6E6E6E6; // Needs to be the same for communicating between 2 NRF24L01 
@@ -11,7 +10,6 @@ const uint64_t pipe = 0xE6E6E6E6E6E6; // Needs to be the same for communicating 
 String trueMess = "button has been pressed";
 String noneMess = "not pressed";
 String confirmMess = "Sent message"
-
 
 void setup(){
   pinMode(igpin, INPUT_PULLUP); // Define the arcade switch NANO pin as an Input using Internal Pullups
