@@ -2,7 +2,8 @@ String config = "xboxcontrollerHID"; //This is the name of your config file from
 String errmess1 = "could not connect to the controller";
 
 /*
-For this program, you need to install these folowing libraries:
+For this program, you'll need to make sure that you have 
+the following libraries for Processing installed:
  - Arduino
  - G4P
  - Game Control Plus
@@ -60,9 +61,9 @@ public void getUserInput(){                   //get input from controller and as
  slideRL = map(cont.getSlider("slideRL").getValue(), -1, 1, 0, 180); //
  rotFB = map(cont.getSlider("rotFB").getValue(), -1, 1, 0, 180); //
  rotRL = map(cont.getSlider("rotRL").getValue(), -1, 1, 0, 180); // 
- throtUD = map(cont.getSlider("throtUD").getValue(), -1, 1, 0, 180); // Change these to the names of the variable you 
- a = map(cont.getButton("butA").getValue(), -1, 1, 0, 180); // set in your config file. See "diagram2" 
- b = map(cont.getButton("butB").getValue(), -1, 1, 0, 180); // 
+ throtUD = map(cont.getSlider("throtUD").getValue(), -1, 1, 0, 180); // Change the strings in quotes to the names of the  
+ a = map(cont.getButton("butA").getValue(), -1, 1, 0, 180); // variables you set in your config file. See "xboxContrVars.png" 
+ b = map(cont.getButton("butB").getValue(), -1, 1, 0, 180); // in the diagrams folder of this project
  x = map(cont.getButton("butX").getValue(), -1, 1, 0, 180); //
  y = map(cont.getButton("butY").getValue(), -1, 1, 0, 180); //
 }
@@ -72,14 +73,15 @@ public void getUserInput(){                   //get input from controller and as
 void draw(){
  getUserInput();
  
- slideFB2 = 180 - slideFB;// Some math bc i have a preference of right > bright
- rotFB2 = 180 - rotFB;// and left > dimm for the joysticks
- 
- arduino.servoWrite(2, (int)slideFB2); //Toggle left joystick to the up & down to make brighter and dimmer 
- arduino.servoWrite(3, (int)slideRL); //Toggle left joystick to the right & left to make brighter and dimmer
- arduino.servoWrite(4, (int)rotFB2); //Toggle right joystick to the up & down to make brighter and dimmer
- arduino.servoWrite(5, (int)rotRL); //Toggle right joystick to the right & left to make brighter and dimmer
- arduino.servoWrite(6, (int)throtUD); //Toggle left and right triggers to make brighter and dimmer
+ slideFB2 = 180 - slideFB; // Some math bc i have a preference of right > bright
+ rotFB2 = 180 - rotFB; // and left > dimm for the joysticks. However, the triggers 
+                       // are opposite; youll see what I mean below.
+                       
+ arduino.servoWrite(2, (int)slideFB2); //Toggle left joystick to the up & down to make brighter & dimmer 
+ arduino.servoWrite(3, (int)slideRL); //Toggle left joystick to the right & left to make brighter & dimmer
+ arduino.servoWrite(4, (int)rotFB2); //Toggle right joystick to the up & down to make brighter & dimmer
+ arduino.servoWrite(5, (int)rotRL); //Toggle right joystick to the right & left to make brighter & dimmer
+ arduino.servoWrite(6, (int)throtUD); //Toggle left and right triggers to make brighter & dimmer
  arduino.servoWrite(7, (int)a); //push A to make brighter
  arduino.servoWrite(8, (int)b); //push B to make brighter
  arduino.servoWrite(9, (int)x); //push X to make brighter
