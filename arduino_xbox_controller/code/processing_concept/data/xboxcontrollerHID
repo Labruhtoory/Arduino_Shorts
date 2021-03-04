@@ -1,0 +1,17 @@
+xboxcontrollerHID
+slideFB	(y) move F/B ; (-) 	3	SLIDER	Y Axis	0	1.0	0.0
+slideRL	(x) move R/L ; (+)	3	SLIDER	X Axis	0	1.0	0.0
+rotFB	(y/z) rotate F/B ; (-)	3	SLIDER	Y Rotation	0	1.0	0.0
+rotRL	(x/z) rotate R/L ; (+)	3	SLIDER	X Rotation	0	1.0	0.0
+throtUD	(z) move U/D ; (+)	3	SLIDER	Z Axis	0	1.0	0.0
+butA	func a	1	BUTTON	Button 0	0	0.0	0.0
+butB	func b	1	BUTTON	Button 1	0	0.0	0.0
+butX	func x	1	BUTTON	Button 2	0	0.0	0.0
+butY	func y	1	BUTTON	Button 3	0	0.0	0.0
+lBump	func lBump	1	BUTTON	Button 4	0	0.0	0.0
+rBump	func rBump	1	BUTTON	Button 5	0	0.0	0.0
+butView	func view	1	BUTTON	Button 6	0	0.0	0.0
+butMenu	func menu	1	BUTTON	Button 7	0	0.0	0.0
+lJoyDown	func lJoyDown	1	BUTTON	Button 8	0	0.0	0.0
+rJoyDown	func rJoyDonw	1	BUTTON	Button 9	0	0.0	0.0
+dPad	func dPad	2	HAT	cooliehat: Hat Switch	0	1.0	0.0
