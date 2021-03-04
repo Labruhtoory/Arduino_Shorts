@@ -1,0 +1,75 @@
+(without correction)
+------------------------------------------------------------------------------
+(XboxContAction --> moving towards value on axis --> function)
+
+
+left joystick up --> (-1) (y-axis) --> slide backwards
+
+left jostick down --> (1) (y-axis) --> slide forwards 
+
+left joystick right --> (1) (x-axis) --> slide right
+
+left joystick left --> (-1) (x-axis) --> slide left
+
+
+
+right joystick up --> (-1) (z/y) --> pitch backwards
+
+right joystick down --> (1) (z/y) --> pitch forward
+
+right joystick right --> (1) (x/y) --> yaw right
+
+right joystick left --> (-1) (x/y) --> yaw left
+
+
+
+left trigger --> (1) (z-axis) --> up
+
+right trigger --> (-1) (z-axis) --> down
+
+
+
+------------------------------------------------------------------------------
+
+Variables in config file (you can build your own to replace mine if you want)
+
+------------------------------------------------------------------------------
+
+
+
+(variable - action)
+
+
+forwBack  --> left joystick --> up & down
+
+rightLeft --> left joystick --> right & left
+
+pitch --> right joystick --> up & down
+
+yaw --> right joystick --> right & left
+
+upDown --> left & right trigger --> up & down
+
+
+(function keys) 
+
+butA
+
+butB
+
+butX
+
+butY
+
+lBump
+
+rBump
+
+viewBut
+
+menuBut	
+
+lJoyPress
+
+rJoyPress
+
